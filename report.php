@@ -60,16 +60,16 @@ if (!empty($columns)) {
 
     //-----------------------------------------------------------------------
     // Build SQL and Report Header
-    $outputString = "<p>";
-    $outputString .= "<table>";
+    $outputString = "<p>\n";
+    $outputString .= "<table>\n";
     $sqlData = "SELECT ";
 
-    $outputString .= "<tr>";
+    $outputString .= "<tr>\n";
     for ($x = 0; $x < sizeof($columnList); $x++) {
         $sqlData .= "`$columnList[$x]`, ";
         $outputString .= "<th>$columnList[$x]</th>";
     }
-    $outputString .= "</tr>";
+    $outputString .= "</tr>\n";
 
     $sqlData = rtrim($sqlData,", ");
     $sqlData .= " FROM $tableName;";
@@ -83,12 +83,12 @@ if (!empty($columns)) {
         foreach ($row as $rowElement) {
             $outputString .= "<td>$rowElement</td>";
         }
-        $outputString .= "</tr>";
+        $outputString .= "</tr>\n";
     }
 
     //-----------------------------------------------------------------------
     // Display Results
-    $outputString .= "</table></p>";
+    $outputString .= "</table>\n</p>\n";
     echo $outputString;
 }
 
