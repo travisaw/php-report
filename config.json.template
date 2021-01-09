@@ -1,0 +1,8 @@
+{
+    "SqlDbType":"mysql",
+    "SqlDbHost":"localhost",
+    "SqlDbName":"<database>",
+    "SqlDbUser":"<user>",
+    "SqlDbPass":"<password>",
+    "SqlDbLogLevel":"0"
+}
