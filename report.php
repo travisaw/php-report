@@ -17,7 +17,7 @@ $db = new dbconn();
 //-----------------------------------------------------------------------
 // Fetch list of reports
 
-$sqlReports = "SELECT `name`, `display_name`, `url` FROM `php-report`;";
+$sqlReports = "SELECT `name`, `display_name`, `url` FROM `php-report` WHERE `active` > 0 ORDER BY `sort_order`;";
 $reportResult = $db->execQuery($sqlReports, 1);
 
 foreach ($reportResult as $reportRow) {

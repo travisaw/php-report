@@ -10,6 +10,8 @@ $sqlTable = "CREATE TABLE IF NOT EXISTS `php-report` (
     `display_name` VARCHAR(50) NOT NULL,
     `description` VARCHAR(500) NULL,
     `url` VARCHAR(50) NOT NULL,
+    `sort_order` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+    `active` TINYINT(3) UNSIGNED NOT NULL DEFAULT '0',
     PRIMARY KEY (`id`)
 )
 DEFAULT CHARSET=utf8
