@@ -10,6 +10,8 @@
 
 <?php
 
+echo "Generated At: " . date('Y-m-d H:i:s e', time()) . "<br><br>\n";
+
 require_once 'dbconn.php';
 
 $db = new dbconn();
